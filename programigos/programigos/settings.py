@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'inicio',
     'login',
 ]
+LOGIN_URL = '/'
 HOME_URL = '/inicio/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'programigos.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'programigosdb',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 

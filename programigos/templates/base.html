@@ -35,7 +35,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>Programigo</h2>
+                <h2>{{ request.session.userNombre }}</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -106,7 +106,7 @@
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="http://127.0.0.1:8000/">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="/logout/">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -125,7 +125,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="{% static 'img/perry.png' %}" alt="">Programigo
+                    <img src="{% static 'img/perry.png' %}" alt="">{{ request.session.userNombre }}
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -137,7 +137,7 @@
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="/logout/"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
